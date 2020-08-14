@@ -26,48 +26,57 @@ namespace Zap;
 /**
  * This file was automatically generated.
  */
-class AjaxSpider {
+class AjaxSpider
+{
 
-	public function __construct ($zap) {
-		$this->zap = $zap;
-	}
+    public function __construct($zap)
+    {
+        $this->zap = $zap;
+    }
 
-	/**
-	 * This component is optional and therefore the API will only work if it is installed
-	 */
-	public function status() {
+    /**
+     * This component is optional and therefore the API will only work if it is installed
+     */
+    public function status()
+    {
         $res = $this->zap->request($this->zap->base . 'ajaxSpider/view/status/');
         return reset($res);
     }
 
-	/**
-	 * This component is optional and therefore the API will only work if it is installed
-	 */
-	public function results($start='', $count='') {
+    /**
+     * This component is optional and therefore the API will only work if it is installed
+     */
+    public function results($start = '', $count = '')
+    {
         $res = $this->zap->request($this->zap->base . 'ajaxSpider/view/results/', array('start' => $start, 'count' => $count));
         return reset($res);
     }
 
-	/**
-	 * This component is optional and therefore the API will only work if it is installed
-	 */
-	public function numberOfResults() {
+    /**
+     * This component is optional and therefore the API will only work if it is installed
+     */
+    public function numberOfResults()
+    {
         $res = $this->zap->request($this->zap->base . 'ajaxSpider/view/numberOfResults/');
         return reset($res);
     }
 
-	/**
-	 * This component is optional and therefore the API will only work if it is installed
-	 */
-	public function scan($url, $inscope='', $apikey='') {
-		return $this->zap->request($this->zap->base . 'ajaxSpider/action/scan/', array('url' => $url, 'inScope' => $inscope, 'apikey' => $apikey));
-	}
+    /**
+     * This component is optional and therefore the API will only work if it is installed
+     */
+    public function scan($url, $inscope = '', $apikey = '')
+    {
+        $res = $this->zap->request($this->zap->base . 'ajaxSpider/action/scan/', array('url' => $url, 'inScope' => $inscope, 'apikey' => $apikey));
+        return reset($res);
+    }
 
-	/**
-	 * This component is optional and therefore the API will only work if it is installed
-	 */
-	public function stop($apikey='') {
-		return $this->zap->request($this->zap->base . 'ajaxSpider/action/stop/', array('apikey' => $apikey));
-	}
+    /**
+     * This component is optional and therefore the API will only work if it is installed
+     */
+    public function stop($apikey = '')
+    {
+        $res = $this->zap->request($this->zap->base . 'ajaxSpider/action/stop/', array('apikey' => $apikey));
+        return reset($res);
+    }
 
 }
