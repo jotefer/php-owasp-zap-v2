@@ -36,21 +36,21 @@ class AjaxSpider {
 	 * This component is optional and therefore the API will only work if it is installed
 	 */
 	public function status() {
-		return $this->zap->request($this->zap->base . 'ajaxSpider/view/status/')->{'status'};
+		return $this->zap->request($this->zap->base . 'ajaxSpider/view/status/');
 	}
 
 	/**
 	 * This component is optional and therefore the API will only work if it is installed
 	 */
 	public function results($start='', $count='') {
-		return $this->zap->request($this->zap->base . 'ajaxSpider/view/results/', array('start' => $start, 'count' => $count))->{'results'};
+		return $this->zap->request($this->zap->base . 'ajaxSpider/view/results/', array('start' => $start, 'count' => $count));
 	}
 
 	/**
 	 * This component is optional and therefore the API will only work if it is installed
 	 */
 	public function numberOfResults() {
-		return $this->zap->request($this->zap->base . 'ajaxSpider/view/numberOfResults/')->{'numberOfResults'};
+		return $this->zap->request($this->zap->base . 'ajaxSpider/view/numberOfResults/');
 	}
 
 	/**
