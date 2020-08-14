@@ -1,6 +1,6 @@
 {
     "name": "jotefer/php-owasp-zap-v2",
-    "description": "PHP client API for OWASP ZAP",
+    "description": "PHP client API for OWASP ZAP. JFR adaptions.",
     "keywords": ["ZAP"],
     "license": "Apache-2.0",
     "authors": [
