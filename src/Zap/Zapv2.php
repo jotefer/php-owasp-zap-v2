@@ -192,7 +192,7 @@ class Zapv2 {
 			if ($param != "") {
 				$param .= "&";
 			}
-			$param .= $key . "=" . urlencode($value);
+            $param .= $key . "=" . (is_bool($value) ? ($value ? 'true' : 'false'): urlencode($value));
 		}
 		return $param;
 	}
